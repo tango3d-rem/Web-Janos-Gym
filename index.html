@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jano´s Gym | Transforma tu cuerpo</title>
+    <link rel="stylesheet" href="css/styles3.css" />
+    <!-- Fuente de Google (Poppins) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconos Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header y Navegación -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">JANO´S GYM</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#registrarse" class="cta-button">Registrarse</a></li>
+          <li><a href="#ingresar">Ingresar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="home">
+      <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="assents/videos/flexiones.mp4" type="video/mp4" />
+          <!-- Fallback para navegadores antiguos -->
+          <img src="img/hero-fallback.jpg" alt="Entrenamiento de fuerza" />
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1>Transforma tu físico con entrenamiento funcional</h1>
+        <p>
+          Clases grupales | Entrenadores certificados | Resultados garantizados
+        </p>
+        <a href="#registro" class="cta-button">¡Iniciar prueba gratis!</a>
+      </div>
+    </section>
+
+    <!-- Sección de Videos de Actividades -->
+    <section class="activities" id="activities">
+      <h2>Actividades en Janos Gym</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <video controls>
+            <source src="assents/videos/flexiones.mp4" type="video/mp4" />
+          </video>
+          <p>Entrenamiento de Cardio</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="assents/videos/flexiones.mp4" type="video/mp4" />
+          </video>
+          <p>Levantamiento de Pesas</p>
+        </div>
+        <div class="video-item">
+          <video controls>
+            <source src="assents/videos/flexiones.mp4" type="video/mp4" />
+          </video>
+          <p>Clases de Yoga</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials" id="testimonials">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <p>
+            "Desde que entreno en Janos Gym, mi energía ha mejorado y he logrado
+            mis objetivos de fitness."
+          </p>
+          <strong>- Carlos G.</strong>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Los entrenadores están altamente calificados y el ambiente es
+            increíble. ¡Muy recomendado!"
+          </p>
+          <strong>- Ana R.</strong>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Janos Gym es el mejor gimnasio al que he asistido, con rutinas
+            efectivas y motivación constante."
+          </p>
+          <strong>- Luis M.</strong>
+          <div class="rating">★★★★★</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section class="services">
+      <div class="service-card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Entrenamiento Personal</h3>
+        <p>Sesiones 1 a 1 con expertos certificados</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tshirt"></i>
+        <h3>Tienda Oficial</h3>
+        <p>Equipamiento e indumentaria premium</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-video"></i>
+        <h3>Coaching Online</h3>
+        <p>Programas desde cualquier lugar</p>
+      </div>
+    </section>
+
+    <!-- Sección Productos Destacados -->
+    <section class="featured-products" id="productos">
+      <h2>Productos Destacados</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/proteina.jpg" alt="Proteína en polvo" />
+          <h4>Proteína Premium</h4>
+          <p class="price">$49.99</p>
+          <button class="buy-button">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="images/guantes.jpg" alt="Guantes de entrenamiento" />
+          <h4>Guantes Profesionales</h4>
+          <p class="price">$29.99</p>
+          <button class="buy-button">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Coaching -->
+    <section class="coaching" id="coaching">
+      <div class="coaching-content">
+        <h2>Programas de Coaching</h2>
+        <div class="program-option">
+          <h3>Plan Básico</h3>
+          <ul>
+            <li>Rutinas semanales</li>
+            <li>Seguimiento nutricional</li>
+            <li>Acceso a comunidad</li>
+          </ul>
+          <a href="#registrarse" class="cta-button">$99/mes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>Av. Fitnes 1234</p>
+          <p>contacto@janosgym.com</p>
+        </div>
+        <div class="footer-section">
+          <h4>Redes Sociales</h4>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

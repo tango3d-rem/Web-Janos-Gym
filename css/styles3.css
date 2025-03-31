@@ -1,0 +1,383 @@
+:root {
+    --naranja: #FF6B35;
+    --dorado: #FFD700;
+    --gris-oscuro: #2E2E2E;
+    --gris-claro: #D3D3D3;
+}
+
+/* Reset y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+.header {
+    background-color: var(--gris-oscuro);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo a {
+    color: var(--dorado);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--gris-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dorado);
+}
+
+.cta-button {
+    background-color: var(--naranja);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #FF5A1F;
+}
+
+/* Sección Hero */
+.hero {
+    height: 100vh;
+    position: relative;
+    margin-top: 60px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 20vh;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--dorado);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Sección de Actividades */
+.activities {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--gris-oscuro);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--naranja);
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-item p {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Testimonios */
+.testimonials {
+    padding: 4rem 2rem;
+    background-color: var(--gris-claro);
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.rating {
+    color: var(--dorado);
+    margin-top: 1rem;
+}
+
+/* Servicios */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--naranja);
+    margin-bottom: 1rem;
+}
+
+/* Productos */
+.featured-products {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    color: var(--naranja);
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.buy-button {
+    background-color: var(--dorado);
+    color: var(--gris-oscuro);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #FFCC00;
+}
+
+/* Sección Coaching Mejorada */
+.coaching {
+    padding: 4rem 2rem;
+    background-color: var(--gris-claro);
+}
+
+.coaching-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program-option {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem 0;
+}
+
+.program-option h3 {
+    color: var(--naranja);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.program-option ul {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.program-option li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--gris-oscuro);
+}
+
+.program-option li::before {
+    content: "✓";
+    color: var(--dorado);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--gris-oscuro);
+    color: var(--gris-claro);
+    padding: 4rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    color: var(--dorado);
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: var(--gris-claro);
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--naranja);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .video-gallery,
+    .testimonial-container,
+    .services,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-option {
+        padding: 2rem 1rem;
+        width: 90%;
+    }
+    
+    .program-option li {
+        font-size: 0.9rem;
+    }
+}
