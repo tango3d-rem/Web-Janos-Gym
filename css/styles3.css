@@ -328,6 +328,7 @@ h2::after {
     background-color: var(--gris-oscuro);
     color: var(--gris-claro);
     padding: 4rem 2rem;
+    border-top: 3px solid var(--dorado);
 }
 
 .footer-content {
