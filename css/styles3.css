@@ -269,7 +269,7 @@ h2::after {
     background-color: #FFCC00;
 }
 
-/* Sección Coaching Mejorada */
+/* Sección Coaching */
 .coaching {
     padding: 4rem 2rem;
     background-color: var(--gris-claro);
@@ -281,8 +281,25 @@ h2::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
+.coaching-content h2 {
+    font-size: 2rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de los planes */
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Estilos de cada plan */
 .program-option {
     background: white;
     padding: 3rem;
@@ -290,28 +307,38 @@ h2::after {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
     width: 100%;
-    max-width: 600px;
-    margin: 2rem 0;
+    max-width: 350px; /* Tamaño más uniforme para 3 columnas */
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Animación al pasar el mouse */
+.program-option:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos de los planes */
 .program-option h3 {
     color: var(--naranja);
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
 }
 
+/* Lista de beneficios */
 .program-option ul {
     list-style: none;
     margin: 2rem 0;
+    padding: 0;
     text-align: left;
     display: inline-block;
 }
 
+/* Elementos de la lista con check */
 .program-option li {
     margin-bottom: 1rem;
     padding-left: 2rem;
     position: relative;
     color: var(--gris-oscuro);
+    font-size: 1rem;
 }
 
 .program-option li::before {
@@ -322,6 +349,35 @@ h2::after {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+/* Botón de contacto */
+.cta-button {
+    display: inline-block;
+    background: var(--naranja);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--dorado);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .programs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-option {
+        max-width: 100%;
+    }
+}
+
 
 /* Footer */
 .footer {
@@ -344,19 +400,58 @@ h2::after {
     margin-bottom: 1rem;
 }
 
-.footer-section a {
+/* .footer-section a {
     color: var(--gris-claro);
     text-decoration: none;
     margin-right: 1rem;
     font-size: 1.5rem;
     transition: color 0.3s;
+} */
+
+.footer-section a {
+    /* display: inline-flex; */
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre ícono y texto */
+    padding: 0.5rem;
+    border-radius: 5px; /* Agregar una ligera curvatura */
+    color: var(--gris-claro);
+    font-size: 1.5rem;
+    /* position: relative; Para el efecto de subrayado */
+    /* text-decoration: none; Quitar subrayado por defecto */
 }
+
 
 .footer-section a:hover {
     color: var(--naranja);
 }
 
+.footer-section a:focus {
+    outline: 2px solid var(--dorado);
+    outline-offset: 3px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gris-claro); /* Línea sutil para separación */
+    font-size: 0.9rem;
+    color: var(--gris-claro);
+}
+
 /* Responsive */
+@media (max-width: 600px) {
+    .footer-content {
+        gap: 3rem; /* Más espacio entre secciones */
+        text-align: center; /* Centrar el texto en móviles */
+    }
+
+    .footer-section a {
+        display: block; /* Hacer los enlaces de contacto más fáciles de tocar */
+        margin: 0.5rem 0;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
